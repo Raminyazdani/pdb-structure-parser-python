@@ -1,0 +1,4 @@
+# Dependencies for PDB structure parser
+
+# Testing framework
+pytest>=7.0.0

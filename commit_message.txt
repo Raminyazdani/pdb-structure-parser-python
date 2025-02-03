@@ -1,0 +1,10 @@
+Ramin Yazdani | PDB Structure Parser | main | feat(setup): Initial project structure and README
+
+Established the foundational project structure for the PDB Structure Parser.
+Created repository with essential infrastructure including Python .gitignore,
+requirements.txt with pytest dependency, and professional .github templates
+for issues and copilot instructions. Added initial README with project overview.
+
+This commit provides a clean foundation with no code yet, just the necessary
+infrastructure to support professional Python development and testing workflows.
+Verified the structure is ready for implementing the PDB parser functionality.
