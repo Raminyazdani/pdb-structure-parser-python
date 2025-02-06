@@ -1,10 +1,11 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(setup): Initial project structure and README
+Ramin Yazdani | PDB Structure Parser | main | feat(parser): Add core PDB file parser and data extraction
 
-Established the foundational project structure for the PDB Structure Parser.
-Created repository with essential infrastructure including Python .gitignore,
-requirements.txt with pytest dependency, and professional .github templates
-for issues and copilot instructions. Added initial README with project overview.
+Implemented the RaminCalc class with core PDB file parsing capabilities.
+Added pdb_file_reader() method that parses ATOM lines following the PDB
+fixed-width format specification. Parser extracts coordinates (x, y, z),
+residue information, chain identifiers, and atom names from columns per
+standard PDB format (0-6 record, 6-11 serial, 12-16 atom name, etc.).
 
-This commit provides a clean foundation with no code yet, just the necessary
-infrastructure to support professional Python development and testing workflows.
-Verified the structure is ready for implementing the PDB parser functionality.
+Returns data as a list of dictionaries for easy downstream analysis.
+Includes error handling for file not found scenarios. Verified parsing
+works correctly with standard PDB format files from RCSB.
