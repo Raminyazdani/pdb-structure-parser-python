@@ -1,11 +1,11 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(parser): Add core PDB file parser and data extraction
+Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Implement amino acid composition calculator
 
-Implemented the RaminCalc class with core PDB file parsing capabilities.
-Added pdb_file_reader() method that parses ATOM lines following the PDB
-fixed-width format specification. Parser extracts coordinates (x, y, z),
-residue information, chain identifiers, and atom names from columns per
-standard PDB format (0-6 record, 6-11 serial, 12-16 atom name, etc.).
+Added amino_acid_composition_calculator() method for analyzing residue
+composition in protein structures. Properly handles residue deduplication
+using (chain, res_seq, res_name) tuples to ensure each residue is counted
+only once (not per-atom). Returns sorted output by frequency (descending)
+for better readability.
 
-Returns data as a list of dictionaries for easy downstream analysis.
-Includes error handling for file not found scenarios. Verified parsing
-works correctly with standard PDB format files from RCSB.
+Uses set-based tracking to prevent double-counting of residues. Output
+format is a dictionary like {'GLY': 42, 'LEU': 28, ...} providing clear
+composition data. Verified accuracy with multiple test PDB structures.

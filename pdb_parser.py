@@ -46,6 +46,30 @@ class RaminCalc:
             return []
         
         return atom_lines
+    
+    def amino_acid_composition_calculator(self, atom_lines):
+        """
+        Calculate amino acid composition from ATOM records
+        
+        Args:
+            atom_lines: List of ATOM line dictionaries
+            
+        Returns:
+            dict: Amino acid composition (sorted by frequency)
+        """
+        residues = {}
+        seen_residues = set()
+        
+        for atom in atom_lines:
+            residue_id = (atom['chain'], atom['res_seq'], atom['res_name'])
+            if residue_id not in seen_residues:
+                res_name = atom['res_name']
+                residues[res_name] = residues.get(res_name, 0) + 1
+                seen_residues.add(residue_id)
+        
+        # Sort by frequency (descending)
+        sorted_residues = dict(sorted(residues.items(), key=lambda x: x[1], reverse=True))
+        return sorted_residues
 
 
 if __name__ == "__main__":
@@ -54,3 +78,8 @@ if __name__ == "__main__":
         parser = RaminCalc()
         atoms = parser.pdb_file_reader(sys.argv[1])
         print(f"Read {len(atoms)} ATOM records")
+        
+        composition = parser.amino_acid_composition_calculator(atoms)
+        print("\nAmino Acid Composition:")
+        for aa, count in composition.items():
+            print(f"  {aa}: {count}")
