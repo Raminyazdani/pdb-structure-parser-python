@@ -70,6 +70,26 @@ class RaminCalc:
         # Sort by frequency (descending)
         sorted_residues = dict(sorted(residues.items(), key=lambda x: x[1], reverse=True))
         return sorted_residues
+    
+    def amino_acid_composition_percentage_calculator(self, atom_lines):
+        """
+        Calculate amino acid composition percentages
+        
+        Args:
+            atom_lines: List of ATOM line dictionaries
+            
+        Returns:
+            dict: Amino acid percentages (sorted by percentage)
+        """
+        composition = self.amino_acid_composition_calculator(atom_lines)
+        total = sum(composition.values())
+        
+        # BUG: Multiplying by 10 instead of 100
+        percentages = {aa: (count / total * 10) for aa, count in composition.items()}
+        
+        # Sort by percentage (descending)
+        sorted_percentages = dict(sorted(percentages.items(), key=lambda x: x[1], reverse=True))
+        return sorted_percentages
 
 
 if __name__ == "__main__":
@@ -83,3 +103,8 @@ if __name__ == "__main__":
         print("\nAmino Acid Composition:")
         for aa, count in composition.items():
             print(f"  {aa}: {count}")
+        
+        percentages = parser.amino_acid_composition_percentage_calculator(atoms)
+        print("\nAmino Acid Percentages:")
+        for aa, pct in percentages.items():
+            print(f"  {aa}: {pct:.2f}%")
