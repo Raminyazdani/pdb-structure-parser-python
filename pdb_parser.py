@@ -84,8 +84,8 @@ class RaminCalc:
         composition = self.amino_acid_composition_calculator(atom_lines)
         total = sum(composition.values())
         
-        # BUG: Multiplying by 10 instead of 100
-        percentages = {aa: (count / total * 10) for aa, count in composition.items()}
+        # Fixed: Multiply by 100 for percentage
+        percentages = {aa: (count / total * 100) for aa, count in composition.items()}
         
         # Sort by percentage (descending)
         sorted_percentages = dict(sorted(percentages.items(), key=lambda x: x[1], reverse=True))
