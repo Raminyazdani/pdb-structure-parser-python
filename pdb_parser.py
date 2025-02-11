@@ -113,6 +113,19 @@ class RaminCalc:
                     hydrophilic_count += count
         
         return {'hydrophobic': hydrophobic_count, 'hydrophilic': hydrophilic_count}
+    
+    def amino_acid_charge_composition_calculator(self, amino_acid_composition):
+        """
+        Calculate charged amino acid composition (positive vs negative)
+        """
+        positive_charged = {'LYS', 'ARG', 'HIS'}
+        negative_charged = {'ASP', 'GLU'}
+        
+        positive_count = sum(count for aa, count in amino_acid_composition.items() if aa in positive_charged)
+        negative_count = sum(count for aa, count in amino_acid_composition.items() if aa in negative_charged)
+        
+        return {'positive': positive_count, 'negative': negative_count}
+
 
 
 

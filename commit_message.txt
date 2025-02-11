@@ -1,11 +1,11 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Add hydrophobicity composition calculator
+Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Add charge composition analysis
 
-Integrated Kyte-Doolittle hydrophobicity scale for amino acid classification.
-Implemented amino_acid_hydrophobicity_composition_calculator() that classifies
-residues as hydrophobic (positive scale values) or hydrophilic (negative values).
-Scale ranges from -4.5 (most hydrophilic) to +4.5 (most hydrophobic).
+Added amino_acid_charge_composition_calculator() for electrostatic analysis.
+Identifies and counts positive residues (LYS, ARG, HIS) and negative residues
+(ASP, GLU). Returns dictionary like {'positive': 45, 'negative': 38} which
+is crucial for understanding protein electrostatic properties.
 
-Uses established Kyte-Doolittle scale from 1982 biophysics literature.
-Returns counts like {'hydrophobic': 120, 'hydrophilic': 98} which is
-important for protein structure/function analysis. Verified classification
-accuracy against known hydrophobicity data.
+This complements the hydrophobicity analysis from step 06 and provides
+deeper insight into protein characteristics. Important for predicting
+protein behavior in different pH environments and protein-protein interactions.
+Verified charge assignments match biochemical standards.
