@@ -1,11 +1,11 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Add charge composition analysis
+Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Implement atomic composition calculators
 
-Added amino_acid_charge_composition_calculator() for electrostatic analysis.
-Identifies and counts positive residues (LYS, ARG, HIS) and negative residues
-(ASP, GLU). Returns dictionary like {'positive': 45, 'negative': 38} which
-is crucial for understanding protein electrostatic properties.
+Added element-level composition analysis with atomic_composition_calculator()
+and atomic_composition_percentage_calculator(). Parses 'element' field from
+PDB ATOM lines to count C, N, O, S and other elements. Provides sorted output
+by frequency for clear reporting.
 
-This complements the hydrophobicity analysis from step 06 and provides
-deeper insight into protein characteristics. Important for predicting
-protein behavior in different pH environments and protein-protein interactions.
-Verified charge assignments match biochemical standards.
+Returns data like {'C': 1450, 'N': 385, 'O': 421, 'S': 12} providing deeper
+structural insight than amino acid composition alone. Percentage calculator
+adds normalized distribution data. Verified atomic counts match expected
+ratios for protein structures. Tested with multiple PDB files.

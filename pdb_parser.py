@@ -125,6 +125,31 @@ class RaminCalc:
         negative_count = sum(count for aa, count in amino_acid_composition.items() if aa in negative_charged)
         
         return {'positive': positive_count, 'negative': negative_count}
+    
+    def atomic_composition_calculator(self, atom_lines):
+        """
+        Calculate atomic composition (C, N, O, S counts)
+        """
+        atoms = {}
+        for atom in atom_lines:
+            element = atom.get('element', '').strip()
+            if element:
+                atoms[element] = atoms.get(element, 0) + 1
+        
+        # Sort by frequency
+        sorted_atoms = dict(sorted(atoms.items(), key=lambda x: x[1], reverse=True))
+        return sorted_atoms
+    
+    def atomic_composition_percentage_calculator(self, atom_lines):
+        """
+        Calculate atomic composition percentages
+        """
+        composition = self.atomic_composition_calculator(atom_lines)
+        total = sum(composition.values())
+        percentages = {elem: (count / total * 100) for elem, count in composition.items()}
+        sorted_percentages = dict(sorted(percentages.items(), key=lambda x: x[1], reverse=True))
+        return sorted_percentages
+
 
 
 
