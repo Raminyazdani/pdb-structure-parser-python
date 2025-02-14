@@ -1,11 +1,12 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(analysis): Implement atomic composition calculators
+Ramin Yazdani | PDB Structure Parser | main | feat(parser): Add heteroatom identification and counting
 
-Added element-level composition analysis with atomic_composition_calculator()
-and atomic_composition_percentage_calculator(). Parses 'element' field from
-PDB ATOM lines to count C, N, O, S and other elements. Provides sorted output
-by frequency for clear reporting.
+Implemented hetero_atom_pdb_reader() for parsing HETATM lines and
+hetero_atom_residue_counter() for counting non-protein atoms. HETATM
+lines indicate ligands, cofactors, and metal ions separate from standard
+protein residues. Explicitly excludes HOH (water) molecules as per
+bioinformatics convention.
 
-Returns data like {'C': 1450, 'N': 385, 'O': 421, 'S': 12} providing deeper
-structural insight than amino acid composition alone. Percentage calculator
-adds normalized distribution data. Verified atomic counts match expected
-ratios for protein structures. Tested with multiple PDB files.
+Important for identifying bound molecules that may be functionally relevant
+like cofactors, substrates, or inhibitors. Returns dictionary of heteroatom
+residue counts. Verified HETATM parsing against multiple PDB structures
+containing various ligands and cofactors.

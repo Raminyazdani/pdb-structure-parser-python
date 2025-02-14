@@ -90,6 +90,50 @@ class RaminCalc:
         # Sort by percentage (descending)
         sorted_percentages = dict(sorted(percentages.items(), key=lambda x: x[1], reverse=True))
         return sorted_percentages
+    
+    def hetero_atom_pdb_reader(self, pdb_file_path):
+        """
+        Read HETATM lines from PDB file
+        """
+        hetatom_lines = []
+        try:
+            with open(pdb_file_path, 'r') as f:
+                for line in f:
+                    if line.startswith('HETATM'):
+                        hetatom_data = {
+                            'record': line[0:6].strip(),
+                            'serial': int(line[6:11].strip()),
+                            'atom_name': line[12:16].strip(),
+                            'res_name': line[17:20].strip(),
+                            'chain': line[21:22].strip(),
+                            'res_seq': int(line[22:26].strip()),
+                            'x': float(line[30:38].strip()),
+                            'y': float(line[38:46].strip()),
+                            'z': float(line[46:54].strip()),
+                        }
+                        hetatom_lines.append(hetatom_data)
+        except Exception as e:
+            print(f"Error reading heteroatoms: {e}")
+        return hetatom_lines
+    
+    def hetero_atom_residue_counter(self, heteroatom_lines):
+        """
+        Count unique heteroatom residues (excluding water)
+        """
+        residues = set()
+        for atom in heteroatom_lines:
+            res_name = atom['res_name']
+            if res_name != 'HOH':  # Exclude water
+                res_id = (atom['chain'], atom['res_seq'], res_name)
+                residues.add(res_id)
+        
+        residue_counts = {}
+        for res_id in residues:
+            res_name = res_id[2]
+            residue_counts[res_name] = residue_counts.get(res_name, 0) + 1
+        
+        return dict(sorted(residue_counts.items(), key=lambda x: x[1], reverse=True))
+
     def amino_acid_hydrophobicity_composition_calculator(self, amino_acid_composition):
         """
         Calculate hydrophobic vs hydrophilic amino acid composition
@@ -149,6 +193,50 @@ class RaminCalc:
         percentages = {elem: (count / total * 100) for elem, count in composition.items()}
         sorted_percentages = dict(sorted(percentages.items(), key=lambda x: x[1], reverse=True))
         return sorted_percentages
+    
+    def hetero_atom_pdb_reader(self, pdb_file_path):
+        """
+        Read HETATM lines from PDB file
+        """
+        hetatom_lines = []
+        try:
+            with open(pdb_file_path, 'r') as f:
+                for line in f:
+                    if line.startswith('HETATM'):
+                        hetatom_data = {
+                            'record': line[0:6].strip(),
+                            'serial': int(line[6:11].strip()),
+                            'atom_name': line[12:16].strip(),
+                            'res_name': line[17:20].strip(),
+                            'chain': line[21:22].strip(),
+                            'res_seq': int(line[22:26].strip()),
+                            'x': float(line[30:38].strip()),
+                            'y': float(line[38:46].strip()),
+                            'z': float(line[46:54].strip()),
+                        }
+                        hetatom_lines.append(hetatom_data)
+        except Exception as e:
+            print(f"Error reading heteroatoms: {e}")
+        return hetatom_lines
+    
+    def hetero_atom_residue_counter(self, heteroatom_lines):
+        """
+        Count unique heteroatom residues (excluding water)
+        """
+        residues = set()
+        for atom in heteroatom_lines:
+            res_name = atom['res_name']
+            if res_name != 'HOH':  # Exclude water
+                res_id = (atom['chain'], atom['res_seq'], res_name)
+                residues.add(res_id)
+        
+        residue_counts = {}
+        for res_id in residues:
+            res_name = res_id[2]
+            residue_counts[res_name] = residue_counts.get(res_name, 0) + 1
+        
+        return dict(sorted(residue_counts.items(), key=lambda x: x[1], reverse=True))
+
 
 
 
