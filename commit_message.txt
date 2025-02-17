@@ -1,12 +1,12 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(parser): Add heteroatom identification and counting
+Ramin Yazdani | PDB Structure Parser | main | feat(spatial): Implement spatial metrics and distance calculations
 
-Implemented hetero_atom_pdb_reader() for parsing HETATM lines and
-hetero_atom_residue_counter() for counting non-protein atoms. HETATM
-lines indicate ligands, cofactors, and metal ions separate from standard
-protein residues. Explicitly excludes HOH (water) molecules as per
-bioinformatics convention.
+Added 3D spatial analysis capabilities with distance_calculator() for Euclidean
+distance computation and most_distant_residue_finder() for identifying the
+most distant residue pair. Uses CA (alpha carbon) atoms as representative
+points for each residue. Performs pairwise distance calculation (O(n²)) to
+find maximum separation.
 
-Important for identifying bound molecules that may be functionally relevant
-like cofactors, substrates, or inhibitors. Returns dictionary of heteroatom
-residue counts. Verified HETATM parsing against multiple PDB structures
-containing various ligands and cofactors.
+Returns maximum distance and residue pair information. Typical protein diameters
+range 30-100 Å. This metric is useful for understanding protein size and shape.
+Verified calculations against known protein dimensions and validated Euclidean
+distance formula implementation.

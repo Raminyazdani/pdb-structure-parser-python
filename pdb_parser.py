@@ -133,6 +133,36 @@ class RaminCalc:
             residue_counts[res_name] = residue_counts.get(res_name, 0) + 1
         
         return dict(sorted(residue_counts.items(), key=lambda x: x[1], reverse=True))
+    
+    def distance_calculator(self, x1, y1, z1, x2, y2, z2):
+        """Calculate Euclidean distance between two points"""
+        return ((x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2)**0.5
+    
+    def most_distant_residue_finder(self, atom_lines):
+        """Find the most distant residue pair"""
+        # Get CA atoms for each residue
+        ca_atoms = {}
+        for atom in atom_lines:
+            if atom['atom_name'] == 'CA':
+                res_id = (atom['chain'], atom['res_seq'], atom['res_name'])
+                ca_atoms[res_id] = (atom['x'], atom['y'], atom['z'])
+        
+        max_dist = 0
+        max_pair = None
+        
+        ca_list = list(ca_atoms.items())
+        for i in range(len(ca_list)):
+            for j in range(i+1, len(ca_list)):
+                res1, coord1 = ca_list[i]
+                res2, coord2 = ca_list[j]
+                dist = self.distance_calculator(coord1[0], coord1[1], coord1[2],
+                                               coord2[0], coord2[1], coord2[2])
+                if dist > max_dist:
+                    max_dist = dist
+                    max_pair = (res1, res2)
+        
+        return max_pair, max_dist
+
 
     def amino_acid_hydrophobicity_composition_calculator(self, amino_acid_composition):
         """
@@ -236,6 +266,36 @@ class RaminCalc:
             residue_counts[res_name] = residue_counts.get(res_name, 0) + 1
         
         return dict(sorted(residue_counts.items(), key=lambda x: x[1], reverse=True))
+    
+    def distance_calculator(self, x1, y1, z1, x2, y2, z2):
+        """Calculate Euclidean distance between two points"""
+        return ((x2-x1)**2 + (y2-y1)**2 + (z2-z1)**2)**0.5
+    
+    def most_distant_residue_finder(self, atom_lines):
+        """Find the most distant residue pair"""
+        # Get CA atoms for each residue
+        ca_atoms = {}
+        for atom in atom_lines:
+            if atom['atom_name'] == 'CA':
+                res_id = (atom['chain'], atom['res_seq'], atom['res_name'])
+                ca_atoms[res_id] = (atom['x'], atom['y'], atom['z'])
+        
+        max_dist = 0
+        max_pair = None
+        
+        ca_list = list(ca_atoms.items())
+        for i in range(len(ca_list)):
+            for j in range(i+1, len(ca_list)):
+                res1, coord1 = ca_list[i]
+                res2, coord2 = ca_list[j]
+                dist = self.distance_calculator(coord1[0], coord1[1], coord1[2],
+                                               coord2[0], coord2[1], coord2[2])
+                if dist > max_dist:
+                    max_dist = dist
+                    max_pair = (res1, res2)
+        
+        return max_pair, max_dist
+
 
 
 
