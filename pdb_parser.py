@@ -162,6 +162,49 @@ class RaminCalc:
                     max_pair = (res1, res2)
         
         return max_pair, max_dist
+    
+    def radius_of_gyration_calculator(self, atom_lines):
+        """
+        Calculate radius of gyration for the structure
+        """
+        # Atomic masses
+        atomic_masses = {
+            'H': 1.008, 'C': 12.011, 'N': 14.007, 'O': 15.999,
+            'S': 32.06, 'P': 30.974, 'FE': 55.845
+        }
+        
+        # Calculate center of mass
+        total_mass = 0
+        cx, cy, cz = 0, 0, 0
+        
+        for atom in atom_lines:
+            element = atom.get('element', '').strip().upper()
+            mass = atomic_masses.get(element, 12.011)  # Default to carbon
+            
+            cx += atom['x'] * mass
+            cy += atom['y'] * mass
+            cz += atom['z'] * mass
+            total_mass += mass
+        
+        cx /= total_mass
+        cy /= total_mass
+        cz /= total_mass
+        
+        # Calculate radius of gyration
+        sum_sq_dist = 0
+        for atom in atom_lines:
+            element = atom.get('element', '').strip().upper()
+            mass = atomic_masses.get(element, 12.011)
+            
+            dx = atom['x'] - cx
+            dy = atom['y'] - cy
+            dz = atom['z'] - cz
+            
+            sum_sq_dist += mass * (dx**2 + dy**2 + dz**2)
+        
+        rg = (sum_sq_dist / total_mass) ** 0.5
+        return rg
+
 
 
     def amino_acid_hydrophobicity_composition_calculator(self, amino_acid_composition):
@@ -295,6 +338,49 @@ class RaminCalc:
                     max_pair = (res1, res2)
         
         return max_pair, max_dist
+    
+    def radius_of_gyration_calculator(self, atom_lines):
+        """
+        Calculate radius of gyration for the structure
+        """
+        # Atomic masses
+        atomic_masses = {
+            'H': 1.008, 'C': 12.011, 'N': 14.007, 'O': 15.999,
+            'S': 32.06, 'P': 30.974, 'FE': 55.845
+        }
+        
+        # Calculate center of mass
+        total_mass = 0
+        cx, cy, cz = 0, 0, 0
+        
+        for atom in atom_lines:
+            element = atom.get('element', '').strip().upper()
+            mass = atomic_masses.get(element, 12.011)  # Default to carbon
+            
+            cx += atom['x'] * mass
+            cy += atom['y'] * mass
+            cz += atom['z'] * mass
+            total_mass += mass
+        
+        cx /= total_mass
+        cy /= total_mass
+        cz /= total_mass
+        
+        # Calculate radius of gyration
+        sum_sq_dist = 0
+        for atom in atom_lines:
+            element = atom.get('element', '').strip().upper()
+            mass = atomic_masses.get(element, 12.011)
+            
+            dx = atom['x'] - cx
+            dy = atom['y'] - cy
+            dz = atom['z'] - cz
+            
+            sum_sq_dist += mass * (dx**2 + dy**2 + dz**2)
+        
+        rg = (sum_sq_dist / total_mass) ** 0.5
+        return rg
+
 
 
 

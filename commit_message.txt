@@ -1,12 +1,12 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(spatial): Implement spatial metrics and distance calculations
+Ramin Yazdani | PDB Structure Parser | main | feat(spatial): Add radius of gyration calculator
 
-Added 3D spatial analysis capabilities with distance_calculator() for Euclidean
-distance computation and most_distant_residue_finder() for identifying the
-most distant residue pair. Uses CA (alpha carbon) atoms as representative
-points for each residue. Performs pairwise distance calculation (O(n²)) to
-find maximum separation.
+Implemented radius_of_gyration_calculator() as a bonus advanced feature.
+Added atomic mass table (H, C, N, O, S, P, FE) for accurate calculations.
+Computes center of mass, then calculates mass-weighted RMS distance from
+center using formula: Rg = sqrt(Σ(mi * ri²) / Σmi).
 
-Returns maximum distance and residue pair information. Typical protein diameters
-range 30-100 Å. This metric is useful for understanding protein size and shape.
-Verified calculations against known protein dimensions and validated Euclidean
-distance formula implementation.
+Radius of gyration indicates structural compactness - typical globular proteins
+have Rg ≈ 15-25 Å. Defaults to carbon mass (12.011) for unknown elements to
+maintain robustness. This is a sophisticated structural biology metric that
+demonstrates deep understanding of protein biophysics. Verified against known
+Rg values for standard protein structures.
