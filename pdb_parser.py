@@ -388,19 +388,66 @@ class RaminCalc:
 
 
 
+
+def print_function(pdb_file):
+    """
+    Main function to analyze PDB file and print all results
+    """
+    parser = RaminCalc()
+    
+    print(f"\nAnalyzing PDB file: {pdb_file}\n")
+    print("="*60)
+    
+    # Read ATOM lines
+    atoms = parser.pdb_file_reader(pdb_file)
+    print(f"\nTotal ATOM records: {len(atoms)}")
+    
+    # Amino acid composition
+    aa_comp = parser.amino_acid_composition_calculator(atoms)
+    print("\nAmino Acid Composition:")
+    for aa, count in aa_comp.items():
+        print(f"  {aa}: {count}")
+    
+    # Amino acid percentages
+    aa_pct = parser.amino_acid_composition_percentage_calculator(atoms)
+    print("\nAmino Acid Percentages:")
+    for aa, pct in aa_pct.items():
+        print(f"  {aa}: {pct:.2f}%")
+    
+    # Hydrophobicity
+    hydro = parser.amino_acid_hydrophobicity_composition_calculator(aa_comp)
+    print(f"\nHydrophobicity: Hydrophobic={hydro['hydrophobic']}, Hydrophilic={hydro['hydrophilic']}")
+    
+    # Charge composition
+    charge = parser.amino_acid_charge_composition_calculator(aa_comp)
+    print(f"\nCharge: Positive={charge['positive']}, Negative={charge['negative']}")
+    
+    # Atomic composition
+    atomic = parser.atomic_composition_calculator(atoms)
+    print("\nAtomic Composition:")
+    for elem, count in atomic.items():
+        print(f"  {elem}: {count}")
+    
+    # Heteroatoms
+    heteroatoms = parser.hetero_atom_pdb_reader(pdb_file)
+    hetero_res = parser.hetero_atom_residue_counter(heteroatoms)
+    print(f"\nHeteroatom residues: {hetero_res}")
+    
+    # Spatial metrics
+    pair, dist = parser.most_distant_residue_finder(atoms)
+    if pair:
+        print(f"\nMost distant residues: {pair[0]} - {pair[1]}, Distance: {dist:.2f} Å")
+    
+    rg = parser.radius_of_gyration_calculator(atoms)
+    print(f"Radius of gyration: {rg:.2f} Å")
+    
+    print("\n" + "="*60)
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) > 1:
-        parser = RaminCalc()
-        atoms = parser.pdb_file_reader(sys.argv[1])
-        print(f"Read {len(atoms)} ATOM records")
-        
-        composition = parser.amino_acid_composition_calculator(atoms)
-        print("\nAmino Acid Composition:")
-        for aa, count in composition.items():
-            print(f"  {aa}: {count}")
-        
-        percentages = parser.amino_acid_composition_percentage_calculator(atoms)
-        print("\nAmino Acid Percentages:")
-        for aa, pct in percentages.items():
-            print(f"  {aa}: {pct:.2f}%")
+        print_function(sys.argv[1])
+    else:
+        print("Usage: python pdb_parser.py <pdb_file>")
+

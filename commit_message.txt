@@ -1,12 +1,12 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(spatial): Add radius of gyration calculator
+Ramin Yazdani | PDB Structure Parser | main | feat(cli): Add main print function and CLI support
 
-Implemented radius_of_gyration_calculator() as a bonus advanced feature.
-Added atomic mass table (H, C, N, O, S, P, FE) for accurate calculations.
-Computes center of mass, then calculates mass-weighted RMS distance from
-center using formula: Rg = sqrt(Σ(mi * ri²) / Σmi).
+Integrated all analysis functions into unified print_function() for comprehensive
+output. Added command-line argument support via sys.argv for production usage.
+Created complete analysis pipeline with user-friendly formatting including section
+headers and clear separators. Single function orchestrates entire workflow.
 
-Radius of gyration indicates structural compactness - typical globular proteins
-have Rg ≈ 15-25 Å. Defaults to carbon mass (12.011) for unknown elements to
-maintain robustness. This is a sophisticated structural biology metric that
-demonstrates deep understanding of protein biophysics. Verified against known
-Rg values for standard protein structures.
+Usage: python pdb_parser.py <pdb_file>
+Displays error message if no file provided. Formatted output presents all metrics
+(composition, percentages, hydrophobicity, charge, atomic stats, heteroatoms,
+spatial metrics) in organized sections. Verified CLI works correctly with various
+PDB files and handles edge cases gracefully.
