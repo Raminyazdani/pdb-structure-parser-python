@@ -1,12 +1,13 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(cli): Add main print function and CLI support
+Ramin Yazdani | PDB Structure Parser | main | feat(test): Add comprehensive test suite with pytest
 
-Integrated all analysis functions into unified print_function() for comprehensive
-output. Added command-line argument support via sys.argv for production usage.
-Created complete analysis pipeline with user-friendly formatting including section
-headers and clear separators. Single function orchestrates entire workflow.
+Created complete test_pdb_parser.py with 12 comprehensive tests covering all
+parser functions. Used pytest fixtures for clean test PDB data. Mock PDB data
+embedded in tests prevents external dependencies. Tests cover: PDB parsing,
+amino acid composition and percentages, atomic composition and percentages,
+hydrophobicity (counts and percentages), charge analysis, heteroatom parsing
+and counting, distance calculations, and radius of gyration.
 
-Usage: python pdb_parser.py <pdb_file>
-Displays error message if no file provided. Formatted output presents all metrics
-(composition, percentages, hydrophobicity, charge, atomic stats, heteroatoms,
-spatial metrics) in organized sections. Verified CLI works correctly with various
-PDB files and handles edge cases gracefully.
+All 12 tests passing. Validates edge cases and ensures accuracy across all
+calculators. Test data is realistic and representative of actual PDB structures.
+This ensures code quality and prevents regressions. Verified test suite runs
+successfully with pytest -v.
