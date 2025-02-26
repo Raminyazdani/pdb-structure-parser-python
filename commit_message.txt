@@ -1,13 +1,13 @@
-Ramin Yazdani | PDB Structure Parser | main | feat(test): Add comprehensive test suite with pytest
+Ramin Yazdani | PDB Structure Parser | main | feat(docs): Enhance README and add portfolio documentation
 
-Created complete test_pdb_parser.py with 12 comprehensive tests covering all
-parser functions. Used pytest fixtures for clean test PDB data. Mock PDB data
-embedded in tests prevents external dependencies. Tests cover: PDB parsing,
-amino acid composition and percentages, atomic composition and percentages,
-hydrophobicity (counts and percentages), charge analysis, heteroatom parsing
-and counting, distance calculations, and radius of gyration.
+Expanded README with detailed usage instructions, comprehensive documentation
+of inputs and outputs, troubleshooting section, and reproducibility notes.
+Added portfolio documentation files: project_identity.md (professional identity),
+suggestion.txt (issues ledger), suggestions_done.txt (changes ledger),
+report.md (transformation report), and results.txt (example output).
 
-All 12 tests passing. Validates edge cases and ensures accuracy across all
-calculators. Test data is realistic and representative of actual PDB structures.
-This ensures code quality and prevents regressions. Verified test suite runs
-successfully with pytest -v.
+README now aligned with project_identity.md professional branding. All assignment
+traces removed and replaced with professional naming. Includes clear setup steps,
+data source information, and complete feature descriptions. Documentation is
+portfolio-ready for professional presentation. Verified all instructions work
+as documented.

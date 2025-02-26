@@ -1,0 +1,18 @@
+TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
+RENAME	assignment1_template.py	filename	assignment1_template.py	pdb_parser.py	Remove assignment trace from main module name	APPLIED
+RENAME	test_assignment1.py	filename	test_assignment1.py	test_pdb_parser.py	Remove assignment trace from test module name	APPLIED
+TRACE	assignment1_template.py	line 6	PDB Parser Script Template for Structural Bioinformatics Assignments	PDB Parser for Structural Bioinformatics	Remove assignment reference from docstring	APPLIED
+TRACE	assignment1_template.py	line 8	Created by Alper Yurtseven on 12 May 2023	Remove entire line	Remove instructor/professor name to make portfolio-ready	APPLIED
+TRACE	requirements.txt	line 1	# Basic requirements for Assignment 1	# Dependencies for PDB structure parser	Remove assignment reference from requirements comment	APPLIED
+TRACE	README.md	line 32	raya00001_7068679-assignment1/	pdb-structure-parser-python/	Update folder name reference to match professional identity	APPLIED
+TRACE	README.md	line 33	├── assignment1_template.py    # Main PDB parser implementation	├── pdb_parser.py    # Main PDB parser implementation	Update filename reference after rename	APPLIED
+TRACE	README.md	line 34	├── test_assignment1.py        # Test suite for validation	├── test_pdb_parser.py        # Test suite for validation	Update filename reference after rename	APPLIED
+TRACE	README.md	line 53	cd raya00001_7068679-assignment1	cd pdb-structure-parser-python	Update directory name in instructions	APPLIED
+TRACE	README.md	line 58	python assignment1_template.py	python pdb_parser.py	Update command after rename	APPLIED
+TRACE	README.md	line 63	python test_assignment1.py	pytest test_pdb_parser.py	Update test command and use pytest properly	APPLIED
+TRACE	README.md	line 97	- Originally created in an academic setting	Remove entire line	Remove academic context reference	APPLIED
+TRACE	README.md	line 107	- Originally created in an academic setting	Remove entire line	Duplicate - remove academic context reference	APPLIED
+PATH	assignment1_template.py	line 665	# print_function("../2yna.pdb")	Remove entire line	Remove commented-out relative path example	APPLIED
+PATH	assignment1_template.py	line 666	# print_function("../test_pdb.txt")	Remove entire line	Remove commented-out relative path example	APPLIED
+DOC	README.md	entire file	Current README structure	Align with project_identity.md: update title, tagline, remove assignment context	Make README portfolio-grade and consistent with professional identity	APPLIED
+OTHER	.gitignore	missing file	N/A	Create .gitignore with Python standard entries	Standard practice for Python projects	APPLIED

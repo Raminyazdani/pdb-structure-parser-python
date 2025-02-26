@@ -1,0 +1,28 @@
+FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+assignment1_template.py → pdb_parser.py	filename rename	assignment1_template.py	pdb_parser.py	Renamed main module to remove assignment trace
+test_assignment1.py → test_pdb_parser.py	filename rename	test_assignment1.py	test_pdb_parser.py	Renamed test module to remove assignment trace
+test_pdb_parser.py	line 2	from assignment1_template import (	from pdb_parser import (	Updated import after main module rename
+pdb_parser.py	line 5-9	"""
+PDB Parser Script Template for Structural Bioinformatics Assignments
+
+Created by Alper Yurtseven on 12 May 2023
+"""	"""
+PDB Parser for Structural Bioinformatics
+"""	Removed assignment reference and instructor name
+pdb_parser.py	line 665-666	# print_function("../2yna.pdb")
+    # print_function("../test_pdb.txt")	(removed)	Cleaned up commented-out relative path examples
+requirements.txt	line 1	# Basic requirements for Assignment 1	# Dependencies for PDB structure parser	Updated comment to remove assignment reference
+README.md	line 1	# Protein Structure Parsing and Analysis	# PDB Structure Parser	Updated title to match project identity
+README.md	line 3	**PDB file parsing and structural bioinformatics analysis**	**Parse and analyze protein 3D structures from PDB files with comprehensive structural bioinformatics metrics**	Updated tagline to match project identity
+README.md	line 5	**Stack:** Python, BioPython	**Stack:** Python, Standard Library, BioPython (optional)	Clarified that BioPython is optional
+README.md	line 32-37	raya00001_7068679-assignment1/
+├── assignment1_template.py
+├── test_assignment1.py	pdb-structure-parser-python/
+├── pdb_parser.py
+├── test_pdb_parser.py	Updated folder structure with new names
+README.md	line 53	cd raya00001_7068679-assignment1	cd pdb-structure-parser-python	Updated directory navigation command
+README.md	line 58	python assignment1_template.py	python pdb_parser.py <path_to_pdb_file>	Updated run command with new filename and proper usage
+README.md	line 63	python test_assignment1.py	pytest test_pdb_parser.py	Updated test command to use pytest properly
+README.md	line 96-97	- Originally created in an academic setting	(removed)	Removed academic context reference from Reproducibility Notes
+README.md	line 107	- Originally created in an academic setting	(removed)	Removed academic context reference from Notes section
+.gitignore	new file	N/A	Created .gitignore	Added standard Python .gitignore with project-specific patterns
