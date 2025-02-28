@@ -1,25 +1,547 @@
-PDB Structure Analysis Results
-==============================
+..........F.FF...FF.FFFFFFFFFF.............F.FFF.FF.FF...FF.FFFF...FFFF. [ 60%]
+F....FF.FFFF.FFFFFF.FF...FF.....................                         [100%]
+Total Points: 5.50
 
-File: 1FCN.pdb (Ficolin protein structure)
-
-Amino Acid Composition:
-  GLY: 42
-  LEU: 28
-  SER: 24
-  ...
-
-Hydrophobicity Analysis:
-  Hydrophobic: 120 residues
-  Hydrophilic: 98 residues
-
-Atomic Composition:
-  C: 1450 atoms
-  N: 385 atoms
-  O: 421 atoms
-  S: 12 atoms
-
-Most Distant Residues: 42.3 Å
-Radius of Gyration: 18.7 Å
-
-Analysis complete.
+=================================== FAILURES ===================================
+_______________ test_amino_acid_composition_calculator[1fcn.pdb] _______________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:78: in test_amino_acid_composition_calculator
+    assert composition == expected_output
+E   AssertionError: assert {'ALA': 37, '...ASP': 14, ...} == {'ALA': 74, '...ASP': 27, ...}
+E     
+E     Differing items:
+E     {'HIS': 5} != {'HIS': 10}
+E     {'ARG': 11} != {'ARG': 22}
+E     {'PRO': 26} != {'PRO': 52}
+E     {'GLU': 16} != {'GLU': 32}
+E     {'ALA': 37} != {'ALA': 74}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_______________ test_amino_acid_composition_calculator[4uc1.pdb] _______________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:78: in test_amino_acid_composition_calculator
+    assert composition == expected_output
+E   AssertionError: assert {'ALA': 26, '...'ASP': 4, ...} == {'ALA': 77, '...ASP': 12, ...}
+E     
+E     Differing items:
+E     {'CYS': 1} != {'CYS': 3}
+E     {'ARG': 6} != {'ARG': 16}
+E     {'PRO': 9} != {'PRO': 26}
+E     {'GLU': 4} != {'GLU': 11}
+E     {'ALA': 26} != {'ALA': 77}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_______________ test_amino_acid_composition_calculator[6iam.pdb] _______________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:78: in test_amino_acid_composition_calculator
+    assert composition == expected_output
+E   AssertionError: assert {'ALA': 21, '...ASP': 22, ...} == {'ALA': 22, '...ASP': 22, ...}
+E     
+E     Omitting 18 identical items, use -vv to show
+E     Differing items:
+E     {'ALA': 21} != {'ALA': 22}
+E     Use -v to get more diff
+_______________ test_amino_acid_composition_calculator[2fb3.pdb] _______________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:78: in test_amino_acid_composition_calculator
+    assert composition == expected_output
+E   AssertionError: assert {'ALA': 15, '...ASP': 31, ...} == {'ALA': 30, '...ASP': 62, ...}
+E     
+E     Differing items:
+E     {'HIS': 4} != {'HIS': 8}
+E     {'CYS': 6} != {'CYS': 12}
+E     {'ARG': 21} != {'ARG': 42}
+E     {'PRO': 7} != {'PRO': 14}
+E     {'GLU': 20} != {'GLU': 39}...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+_______________ test_amino_acid_composition_calculator[3me4.pdb] _______________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:78: in test_amino_acid_composition_calculator
+    assert composition == expected_output
+E   AssertionError: assert {'ALA': 9, 'A...ASP': 11, ...} == {'ALA': 17, '...ASP': 22, ...}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'GLU': 10} != {'GLU': 19}
+E     {'HIS': 7} != {'HIS': 13}
+E     {'VAL': 8} != {'VAL': 16}
+E     {'LEU': 15} != {'LEU': 26}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[1fcn.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 10.33...25139665, ...} == {'ALA': 10.42...14084505, ...}
+E     
+E     Differing items:
+E     {'HIS': 1.3966480446927374} != {'HIS': 1.4084507042253522}
+E     {'ARG': 3.0726256983240225} != {'ARG': 3.0985915492957745}
+E     {'PRO': 7.262569832402234} != {'PRO': 7.323943661971831}
+E     {'GLU': 4.4692737430167595} != {'GLU': 4.507042253521127}
+E     {'ALA': 10.335195530726256} != {'ALA': 10.422535211267606}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[4mgy.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 5.791...15057915, ...} == {'ALA': 5.791...15057915, ...}
+E     
+E     Omitting 17 identical items, use -vv to show
+E     Differing items:
+E     {'GLY': 4.890604890604891} != {'GLY': 4.89060489060489}
+E     {'HIS': 2.4453024453024454} != {'HIS': 2.445302445302445}
+E     {'VAL': 8.88030888030888} != {'VAL': 8.880308880308881}
+E     Use -v to get more diff
+_________ test_amino_acid_composition_percentage_calculator[4uc1.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 16.56...06369426, ...} == {'ALA': 16.66...74025974, ...}
+E     
+E     Differing items:
+E     {'CYS': 0.6369426751592356} != {'CYS': 0.6493506493506493}
+E     {'ARG': 3.821656050955414} != {'ARG': 3.463203463203463}
+E     {'PRO': 5.732484076433121} != {'PRO': 5.627705627705628}
+E     {'GLU': 2.5477707006369426} != {'GLU': 2.380952380952381}
+E     {'ALA': 16.56050955414013} != {'ALA': 16.666666666666664}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[6iam.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 6.562...': 6.875, ...} == {'ALA': 6.853...54517133, ...}
+E     
+E     Differing items:
+E     {'HIS': 2.8125} != {'HIS': 2.803738317757009}
+E     {'CYS': 3.125} != {'CYS': 3.115264797507788}
+E     {'ARG': 1.5625} != {'ARG': 1.557632398753894}
+E     {'PRO': 3.4375} != {'PRO': 3.4267912772585665}
+E     {'GLU': 2.8125} != {'GLU': 2.803738317757009}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[6or5.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 5.928...67152576, ...} == {'ALA': 5.928...67152575, ...}
+E     
+E     Omitting 14 identical items, use -vv to show
+E     Differing items:
+E     {'GLU': 7.045675413022352} != {'GLU': 7.0456754130223525}
+E     {'VAL': 7.045675413022352} != {'VAL': 7.0456754130223525}
+E     {'LEU': 13.945578231292517} != {'LEU': 13.945578231292515}
+E     {'GLY': 3.935860058309038} != {'GLY': 3.9358600583090384}...
+E     
+E     ...Full output truncated (3 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[1fcs.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 11.03...96103896, ...} == {'ALA': 11.03...96103896, ...}
+E     
+E     Omitting 12 identical items, use -vv to show
+E     Differing items:
+E     {'LEU': 11.688311688311689} != {'LEU': 11.688311688311687}
+E     {'HIS': 7.142857142857143} != {'HIS': 7.142857142857142}
+E     {'VAL': 5.8441558441558445} != {'VAL': 5.844155844155844}
+E     {'GLN': 3.2467532467532467} != {'GLN': 3.2467532467532463}...
+E     
+E     ...Full output truncated (4 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[2dg7.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 18.37...75675675, ...} == {'ALA': 18.37...67567568, ...}
+E     
+E     Omitting 17 identical items, use -vv to show
+E     Differing items:
+E     {'ASP': 7.5675675675675675} != {'ASP': 7.567567567567568}
+E     {'PRO': 3.7837837837837838} != {'PRO': 3.783783783783784}
+E     Use -v to get more diff
+_________ test_amino_acid_composition_percentage_calculator[2fb3.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 4.587...24159021, ...} == {'ALA': 4.594...22511486, ...}
+E     
+E     Differing items:
+E     {'HIS': 1.2232415902140672} != {'HIS': 1.2251148545176112}
+E     {'CYS': 1.834862385321101} != {'CYS': 1.8376722817764166}
+E     {'ARG': 6.422018348623853} != {'ARG': 6.431852986217458}
+E     {'PRO': 2.140672782874618} != {'PRO': 2.1439509954058193}
+E     {'GLU': 6.116207951070336} != {'GLU': 5.972434915773354}...
+E     
+E     ...Full output truncated (16 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[3me4.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 5.325...39644971, ...} == {'ALA': 5.329...24137931, ...}
+E     
+E     Differing items:
+E     {'HIS': 4.1420118343195265} != {'HIS': 4.075235109717868}
+E     {'CYS': 11.834319526627219} != {'CYS': 11.912225705329153}
+E     {'ARG': 4.1420118343195265} != {'ARG': 4.38871473354232}
+E     {'PRO': 7.100591715976331} != {'PRO': 6.896551724137931}
+E     {'GLU': 5.9171597633136095} != {'GLU': 5.956112852664576}...
+E     
+E     ...Full output truncated (15 lines hidden), use '-vv' to show
+_________ test_amino_acid_composition_percentage_calculator[5fr0.pdb] __________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:86: in test_amino_acid_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'ALA': 4.513...P': 6.25, ...} == {'ALA': 4.513...P': 6.25, ...}
+E     
+E     Omitting 14 identical items, use -vv to show
+E     Differing items:
+E     {'HIS': 2.0833333333333335} != {'HIS': 2.083333333333333}
+E     {'VAL': 2.4305555555555554} != {'VAL': 2.430555555555556}
+E     {'ALA': 4.513888888888889} != {'ALA': 4.513888888888888}
+E     {'PRO': 4.166666666666667} != {'PRO': 4.166666666666666}...
+E     
+E     ...Full output truncated (3 lines hidden), use '-vv' to show
+___________ test_atomic_composition_percentage_calculator[6iam.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:102: in test_atomic_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'C': 31.8318...48948949, ...} == {'C': 31.8318...48948949, ...}
+E     
+E     Omitting 4 identical items, use -vv to show
+E     Differing items:
+E     {'H': 49.949949949949946} != {'H': 49.94994994994995}
+E     Use -v to get more diff
+___________ test_atomic_composition_percentage_calculator[1fcs.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:102: in test_atomic_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'C': 64.3556...9820554649266} == {'C': 64.3556...9820554649263}
+E     
+E     Differing items:
+E     {'N': 17.862969004893966} != {'N': 17.862969004893962}
+E     {'O': 17.536704730831975} != {'O': 17.53670473083197}
+E     {'S': 0.24469820554649266} != {'S': 0.24469820554649263}
+E     {'C': 64.35562805872758} != {'C': 64.35562805872756}
+E     Use -v to get more diff
+___________ test_atomic_composition_percentage_calculator[2dg7.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:102: in test_atomic_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'C': 62.0567...2198581560284} == {'C': 62.0567...2198581560284}
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Differing items:
+E     {'C': 62.05673758865248} != {'C': 62.056737588652474}
+E     Use -v to get more diff
+___________ test_atomic_composition_percentage_calculator[2fb3.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:102: in test_atomic_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'C': 63.3605...0779442442632} == {'C': 63.3605...7794424426327}
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Differing items:
+E     {'S': 0.4930779442442632} != {'S': 0.49307794424426327}
+E     Use -v to get more diff
+___________ test_atomic_composition_percentage_calculator[5fr0.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:102: in test_atomic_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'C': 63.7067...5112878950763} == {'C': 63.7067...5112878950763}
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Differing items:
+E     {'C': 63.70672973554074} != {'C': 63.70672973554075}
+E     Use -v to get more diff
+_______ test_amino_acid_hydrophobicity_composition_calculator[1fcn.pdb] ________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:111: in test_amino_acid_hydrophobicity_composition_calculator
+    assert hydrophobicity == expected_output
+E   AssertionError: assert {'Hydrophilic...ophobic': 128} == {'Hydrophilic...ophobic': 256}
+E     
+E     Differing items:
+E     {'Hydrophobic': 128} != {'Hydrophobic': 256}
+E     {'Hydrophilic': 230} != {'Hydrophilic': 454}
+E     Use -v to get more diff
+_______ test_amino_acid_hydrophobicity_composition_calculator[4uc1.pdb] ________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:111: in test_amino_acid_hydrophobicity_composition_calculator
+    assert hydrophobicity == expected_output
+E   AssertionError: assert {'Hydrophilic...rophobic': 81} == {'Hydrophilic...ophobic': 240}
+E     
+E     Differing items:
+E     {'Hydrophobic': 81} != {'Hydrophobic': 240}
+E     {'Hydrophilic': 76} != {'Hydrophilic': 222}
+E     Use -v to get more diff
+_______ test_amino_acid_hydrophobicity_composition_calculator[6iam.pdb] ________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:111: in test_amino_acid_hydrophobicity_composition_calculator
+    assert hydrophobicity == expected_output
+E   AssertionError: assert {'Hydrophilic...ophobic': 111} == {'Hydrophilic...ophobic': 112}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'Hydrophobic': 111} != {'Hydrophobic': 112}
+E     Use -v to get more diff
+_______ test_amino_acid_hydrophobicity_composition_calculator[2fb3.pdb] ________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:111: in test_amino_acid_hydrophobicity_composition_calculator
+    assert hydrophobicity == expected_output
+E   AssertionError: assert {'Hydrophilic...ophobic': 125} == {'Hydrophilic...ophobic': 250}
+E     
+E     Differing items:
+E     {'Hydrophobic': 125} != {'Hydrophobic': 250}
+E     {'Hydrophilic': 202} != {'Hydrophilic': 403}
+E     Use -v to get more diff
+_______ test_amino_acid_hydrophobicity_composition_calculator[3me4.pdb] ________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:111: in test_amino_acid_hydrophobicity_composition_calculator
+    assert hydrophobicity == expected_output
+E   AssertionError: assert {'Hydrophilic...rophobic': 57} == {'Hydrophilic...ophobic': 106}
+E     
+E     Differing items:
+E     {'Hydrophobic': 57} != {'Hydrophobic': 106}
+E     {'Hydrophilic': 112} != {'Hydrophilic': 213}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[1fcn.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...4189944134076} == {'Hydrophilic...6338028169016}
+E     
+E     Differing items:
+E     {'Hydrophobic': 35.754189944134076} != {'Hydrophobic': 36.056338028169016}
+E     {'Hydrophilic': 64.24581005586592} != {'Hydrophilic': 63.94366197183099}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[4mgy.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...1184041184041} == {'Hydrophilic...1184041184041}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'Hydrophilic': 59.58815958815959} != {'Hydrophilic': 59.588159588159584}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[4uc1.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...9235668789809} == {'Hydrophilic...4805194805194}
+E     
+E     Differing items:
+E     {'Hydrophobic': 51.59235668789809} != {'Hydrophobic': 51.94805194805194}
+E     {'Hydrophilic': 48.40764331210191} != {'Hydrophilic': 48.05194805194805}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[6iam.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...bic': 34.6875} == {'Hydrophilic...0965732087224}
+E     
+E     Differing items:
+E     {'Hydrophobic': 34.6875} != {'Hydrophobic': 34.890965732087224}
+E     {'Hydrophilic': 65.3125} != {'Hydrophilic': 65.10903426791276}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[2fb3.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...2262996941896} == {'Hydrophilic...8483920367535}
+E     
+E     Differing items:
+E     {'Hydrophobic': 38.2262996941896} != {'Hydrophobic': 38.28483920367535}
+E     {'Hydrophilic': 61.7737003058104} != {'Hydrophilic': 61.71516079632465}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[3me4.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...2781065088758} == {'Hydrophilic...2884012539185}
+E     
+E     Differing items:
+E     {'Hydrophobic': 33.72781065088758} != {'Hydrophobic': 33.22884012539185}
+E     {'Hydrophilic': 66.27218934911242} != {'Hydrophilic': 66.77115987460816}
+E     Use -v to get more diff
+__ test_amino_acid_hydrophobicity_composition_percentage_calculator[5fr0.pdb] __
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:120: in test_amino_acid_hydrophobicity_composition_percentage_calculator
+    assert percentage == expected_output
+E   AssertionError: assert {'Hydrophilic...0277777777778} == {'Hydrophilic...0277777777778}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Differing items:
+E     {'Hydrophilic': 69.09722222222223} != {'Hydrophilic': 69.09722222222221}
+E     Use -v to get more diff
+___________ test_amino_acid_charge_composition_calculator[1fcn.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:129: in test_amino_acid_charge_composition_calculator
+    assert charge == expected_output
+E   AssertionError: assert {'Negative': ...Positive': 37} == {'Negative': ...Positive': 73}
+E     
+E     Differing items:
+E     {'Positive': 37} != {'Positive': 73}
+E     {'Negative': 30} != {'Negative': 59}
+E     Use -v to get more diff
+___________ test_amino_acid_charge_composition_calculator[4uc1.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:129: in test_amino_acid_charge_composition_calculator
+    assert charge == expected_output
+E   AssertionError: assert {'Negative': 8, 'Positive': 9} == {'Negative': ...Positive': 25}
+E     
+E     Differing items:
+E     {'Positive': 9} != {'Positive': 25}
+E     {'Negative': 8} != {'Negative': 23}
+E     Use -v to get more diff
+___________ test_amino_acid_charge_composition_calculator[2fb3.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:129: in test_amino_acid_charge_composition_calculator
+    assert charge == expected_output
+E   AssertionError: assert {'Negative': ...Positive': 50} == {'Negative': ...ositive': 100}
+E     
+E     Differing items:
+E     {'Positive': 50} != {'Positive': 100}
+E     {'Negative': 51} != {'Negative': 101}
+E     Use -v to get more diff
+___________ test_amino_acid_charge_composition_calculator[3me4.pdb] ____________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:129: in test_amino_acid_charge_composition_calculator
+    assert charge == expected_output
+E   AssertionError: assert {'Negative': ...Positive': 23} == {'Negative': ...Positive': 44}
+E     
+E     Differing items:
+E     {'Positive': 23} != {'Positive': 44}
+E     {'Negative': 21} != {'Negative': 41}
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[1fcn.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 5544...      C', ...] == ['HETATM 5544...      C', ...]
+E     
+E     Right contains 126 more items, first extra item: 'HETATM 5592  O   HOH A 962      21.631 -13.173  19.496  1.00 10.58           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[4mgy.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 6241...      C', ...] == ['HETATM 6241...      C', ...]
+E     
+E     Right contains 231 more items, first extra item: 'HETATM 6277  O   HOH E1101      18.458 -19.846 -53.850  1.00  7.97           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[4uc1.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 3762...      C', ...] == ['HETATM 3762...      C', ...]
+E     
+E     Right contains 83 more items, first extra item: 'HETATM 4251  O   HOH A 301      -9.616  26.993   6.844  1.00 42.19           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[6iam.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 4824...      C', ...] == ['HETATM 4824...      C', ...]
+E     
+E     Right contains 423 more items, first extra item: 'HETATM 5039  O   HOH A 501     -14.347  26.224 -28.869  1.00 30.13           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[1fcs.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 1228...      S', ...] == ['HETATM 1228...      S', ...]
+E     
+E     Right contains 120 more items, first extra item: 'HETATM 1281  O   HOH A 201      35.125  -2.707  15.802  1.00 32.39           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[2dg7.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM    1...      C', ...] == ['HETATM    1...      C', ...]
+E     
+E     Right contains 55 more items, first extra item: 'HETATM 1428  O   HOH A 196      22.954  21.656  34.746  1.00 28.99           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[2fb3.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 5276...      N', ...] == ['HETATM 5276...      N', ...]
+E     
+E     Right contains 127 more items, first extra item: 'HETATM 5394  O   HOH A 502      14.582  82.986   7.549  1.00 41.47           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[3me4.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 2436...      O', ...] == ['HETATM 2436...      O', ...]
+E     
+E     Right contains 221 more items, first extra item: 'HETATM 2483  O   HOH A 228       1.350 -46.293 -16.682  1.00 31.82           O'
+E     Use -v to get more diff
+____________________ test_hetero_atom_pdb_reader[5fr0.pdb] _____________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:136: in test_hetero_atom_pdb_reader
+    assert heteroatom_lines == expected_output
+E   AssertionError: assert ['HETATM 4653...      N', ...] == ['HETATM 4653...      N', ...]
+E     
+E     Right contains 415 more items, first extra item: 'HETATM 4675  O   HOH A2001      75.091  -3.427   2.926  1.00 30.46           O'
+E     Use -v to get more diff
+__________________ test_hetero_atom_residue_counter[1fcn.pdb] __________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:144: in test_hetero_atom_residue_counter
+    assert composition == expected_output
+E   AssertionError: assert {'LOR': 1} == {'LOR': 2}
+E     
+E     Differing items:
+E     {'LOR': 1} != {'LOR': 2}
+E     Use -v to get more diff
+__________________ test_hetero_atom_residue_counter[4uc1.pdb] __________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:144: in test_hetero_atom_residue_counter
+    assert composition == expected_output
+E   AssertionError: assert {'MOE': 1, 'O...'PP9': 1, ...} == {'MOE': 1, 'O...'PP9': 1, ...}
+E     
+E     Omitting 4 identical items, use -vv to show
+E     Differing items:
+E     {'OLC': 7} != {'OLC': 17}
+E     Use -v to get more diff
+__________________ test_hetero_atom_residue_counter[6iam.pdb] __________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:144: in test_hetero_atom_residue_counter
+    assert composition == expected_output
+E   AssertionError: assert {'  K': 3, ' NA': 2, 'XY5': 1} == {'K': 3, 'NA': 2, 'XY5': 1}
+E     
+E     Omitting 1 identical items, use -vv to show
+E     Left contains 2 more items:
+E     {'  K': 3, ' NA': 2}
+E     Right contains 2 more items:
+E     {'K': 3, 'NA': 2}
+E     Use -v to get more diff
+__________________ test_hetero_atom_residue_counter[2fb3.pdb] __________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:144: in test_hetero_atom_residue_counter
+    assert composition == expected_output
+E   AssertionError: assert {'5AD': 1, 'G...'POP': 1, ...} == {'5AD': 1, 'G...'POP': 1, ...}
+E     
+E     Omitting 4 identical items, use -vv to show
+E     Differing items:
+E     {'SO4': 1} != {'SO4': 2}
+E     {'SF4': 2} != {'SF4': 4}
+E     Use -v to get more diff
+__________________ test_hetero_atom_residue_counter[3me4.pdb] __________________
+../../../assignments/assignment1/test_assignment1_not_student_cli.py:144: in test_hetero_atom_residue_counter
+    assert composition == expected_output
+E   AssertionError: assert {' CL': 2, ' ...'GOL': 4, ...} == {'ACT': 2, 'C... 'NA': 2, ...}
+E     
+E     Omitting 3 identical items, use -vv to show
+E     Left contains 2 more items:
+E     {' CL': 2, ' NA': 2}
+E     Right contains 2 more items:
+E     {'CL': 3, 'NA': 2}
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_calculator[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_calculator[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_calculator[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_calculator[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[4mgy.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[6or5.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[1fcs.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[2dg7.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_composition_percentage_calculator[5fr0.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_atomic_composition_percentage_calculator[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_atomic_composition_percentage_calculator[1fcs.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_atomic_composition_percentage_calculator[2dg7.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_atomic_composition_percentage_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_atomic_composition_percentage_calculator[5fr0.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_calculator[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_calculator[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_calculator[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_calculator[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[4mgy.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_hydrophobicity_composition_percentage_calculator[5fr0.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_charge_composition_calculator[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_charge_composition_calculator[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_charge_composition_calculator[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_amino_acid_charge_composition_calculator[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[4mgy.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[1fcs.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[2dg7.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[3me4.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_pdb_reader[5fr0.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_residue_counter[1fcn.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_residue_counter[4uc1.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_residue_counter[6iam.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_residue_counter[2fb3.pdb]
+FAILED ../../../assignments/assignment1/test_assignment1_not_student_cli.py::test_hetero_atom_residue_counter[3me4.pdb]
+50 failed, 70 passed in 20.63s
+Total Points: 5.50

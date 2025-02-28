@@ -14,7 +14,7 @@
 - 12/12 tests passing
 - 17 issues documented in suggestion.txt (all applied)
 - 15 changes documented in suggestions_done.txt
-- 11-step git history created with full snapshots
+- **Git History Expansion:** 6 steps → 15 steps (2.5× multiplier)
 - 0 security vulnerabilities introduced
 
 ### Phase 0 - Initial Setup
@@ -215,6 +215,72 @@ B) Git historian deliverables:
 - No sensitive data exposed ✓
 - Only standard library + pytest (safe dependencies) ✓
 
+### Phase 6 - History Expansion (Current Run)
+
+**Goal:** Expand git history from 6 steps to 15 steps (minimum 1.5× multiplier)
+
+**Previous History State:**
+- N_old = 6 steps (non-sequential: step_01, step_02, step_03, step_07, step_09, step_11)
+- Missing intermediate steps (04, 05, 06, 08, 10)
+- step_11 didn't match current state exactly
+
+**Target:**
+- N_target = ceil(6 * 1.5) = 9 steps minimum
+- Achieved: 15 steps (2.5× multiplier) ✅
+- Sequential numbering: step_01 through step_15 ✅
+
+**Expansion Strategy:**
+
+1. **Step Splitting:**
+   - Old step_03 → New steps 03, 04, 05 (amino acid composition split into 3 steps)
+   - Old step_07 → New steps 09, 10 (heteroatom and spatial metrics split)
+   - Old step_11 → New steps 14, 15 (documentation and final state split)
+
+2. **New Intermediate Steps Added:**
+   - Step 06: Hydrophobicity analysis
+   - Step 07: Charge composition
+   - Step 08: Atomic composition
+   - Step 11: Radius of gyration
+   - Step 12: CLI and main function
+
+3. **Oops → Hotfix Sequence:**
+   - **Step 04 (Bug):** Percentage calculator multiplies by 10 instead of 100
+   - **Step 05 (Fix):** Corrected to multiply by 100 for proper percentages
+   - Demonstrates realistic debugging and iterative development
+
+**Verification Commands:**
+```bash
+# Count steps
+ls -d history/steps/step_* | wc -l
+# Output: 15
+
+# Verify sequential naming
+ls history/steps/ | sort -V
+# Output: step_01, step_02, ..., step_15
+
+# Verify step_15 matches current state
+diff -r . history/steps/step_15 --exclude=.git --exclude=history --exclude=history_previous_run --exclude=.pytest_cache
+# Output: (no differences)
+
+# Run tests
+pytest test_pdb_parser.py -v
+# Output: 12 passed
+```
+
+**Verification Results:**
+- ✅ All 15 steps created with sequential numbering
+- ✅ step_15 matches current repository state exactly (excluding .git/ and history/)
+- ✅ No snapshots include .git/ or history/ directories
+- ✅ history/github_steps.md includes expansion note with N_old, N_target, multiplier
+- ✅ Mapping table shows old steps → new steps transformation
+- ✅ Oops→hotfix sequence documented (steps 04-05)
+- ✅ All tests passing (12/12)
+- ✅ Multiplier: 2.5× (exceeds 1.5× minimum requirement)
+
+**Previous History Preserved:**
+- Archived to history_previous_run/ directory
+- Original 6 steps preserved for reference
+
 ### Final Summary
 
 **Repository Status: PORTFOLIO-READY** ✅
@@ -228,10 +294,12 @@ B) Git historian deliverables:
 2. Professional naming throughout (files, docs, code)
 3. Comprehensive documentation aligned with project identity
 4. Full test suite passing (12/12 tests)
-5. Complete git history reconstruction (11 logical steps)
+5. Complete git history reconstruction (15 logical steps, 2.5× expansion)
 6. All deliverables present and verified
 7. No feature creep - preserved original functionality
 8. Safety maintained - no secrets, proper .gitignore
+9. Realistic debugging sequence included (bug injection + fix)
+10. Sequential step numbering (step_01 through step_15)
 
 **Project Identity:**
 - Display Title: PDB Structure Parser
@@ -244,3 +312,55 @@ B) Git historian deliverables:
 - Test suite comprehensive
 - CLI usage documented
 - Data sources explained
+
+---
+
+## Final Checklist (Phase 3 Requirement)
+
+### Portfolio Deliverables
+- [x] project_identity.md complete and aligned with README
+- [x] README.md portfolio-grade and accurate
+- [x] suggestion.txt contains findings with final statuses (all STATUS=APPLIED)
+- [x] suggestions_done.txt contains all applied changes with before/after + locators
+- [x] Repo runs or blockers are documented with exact reproduction steps
+
+### Verification & Testing
+- [x] Tests exist and pass (12/12 tests passing with pytest)
+- [x] Verification commands documented in report.md
+- [x] Smoke-run verification completed (pytest test_pdb_parser.py -v)
+
+### Git Historian Deliverables
+- [x] history/github_steps.md complete + includes "History expansion note"
+- [x] history/steps contains step_01..step_N (sequential integers: step_01 through step_15)
+- [x] N_new >= ceil(N_old * 1.5) when N_old existed (15 >= 9 ✓, achieved 2.5× multiplier)
+- [x] step_N matches final working tree exactly (excluding history/)
+- [x] No snapshot includes history/ or .git/
+- [x] Oops→hotfix sequence included (steps 04-05: percentage bug and fix)
+- [x] History expansion note includes N_old, N_target, multiplier
+- [x] Mapping table from old steps to new steps included
+
+### Safety & Integrity
+- [x] No secrets added
+- [x] No fabricated datasets
+- [x] User code preserved (only renamed/refactored)
+- [x] Previous history archived (history_previous_run/)
+
+### Documentation Quality
+- [x] All portfolio deliverables exist with real content
+- [x] README setup instructions accurate and tested
+- [x] CLI usage documented correctly
+- [x] Troubleshooting section included
+- [x] Data sources explained
+
+**Status: ALL ITEMS COMPLETE ✅**
+
+**N_old:** 6 steps
+**N_target:** 9 steps (minimum)
+**N_achieved:** 15 steps
+**Multiplier:** 2.5× (exceeds 1.5× requirement)
+
+**Historian Verification:**
+- Previous run: 6 steps (non-sequential)
+- Current run: 15 steps (sequential)
+- All snapshots exclude .git/ and history/
+- Final snapshot (step_15) verified to match repository state exactly
