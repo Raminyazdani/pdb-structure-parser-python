@@ -659,4 +659,8 @@ def print_function(pdb_file):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python pdb_parser.py <path_to_pdb_file>")
+        print("Example: python pdb_parser.py 1FCN.pdb")
+        sys.exit(1)
     print_function(sys.argv[1])
