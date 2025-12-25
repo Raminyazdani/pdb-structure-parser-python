@@ -1,0 +1,4 @@
+# Basic requirements for Assignment 1
+# No external libraries required - uses only Python standard library
+# For testing:
+pytest>=7.0.0
