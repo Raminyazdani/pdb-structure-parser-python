@@ -1,8 +1,8 @@
-# Protein Structure Parsing and Analysis
+# PDB Structure Parser
 
-**PDB file parsing and structural bioinformatics analysis**
+**Parse and analyze protein 3D structures from PDB files with comprehensive structural bioinformatics metrics**
 
-**Stack:** Python, BioPython
+**Stack:** Python, Standard Library, BioPython (optional)
 
 ## Overview
 
@@ -29,11 +29,12 @@ This project implements a comprehensive PDB (Protein Data Bank) file parser and 
 ## Folder Structure
 
 ```
-raya00001_7068679-assignment1/
-├── assignment1_template.py    # Main PDB parser implementation
-├── test_assignment1.py        # Test suite for validation
+pdb-structure-parser-python/
+├── pdb_parser.py              # Main PDB parser implementation
+├── test_pdb_parser.py         # Test suite for validation
 ├── results.txt                # Example output results
 ├── requirements.txt           # Python dependencies
+├── .gitignore                 # Git ignore patterns
 └── README.md                  # This file
 ```
 
@@ -50,17 +51,27 @@ pip install -r requirements.txt
 
 1. **Navigate to project directory:**
 ```bash
-cd raya00001_7068679-assignment1
+cd pdb-structure-parser-python
 ```
 
 2. **Run the parser:**
 ```bash
-python assignment1_template.py
+python pdb_parser.py <path_to_pdb_file>
+```
+
+Example:
+```bash
+python pdb_parser.py 1FCN.pdb
 ```
 
 3. **Run tests:**
 ```bash
-python test_assignment1.py
+pytest test_pdb_parser.py
+```
+
+Or run all tests with verbose output:
+```bash
+pytest test_pdb_parser.py -v
 ```
 
 ## Data / Inputs
@@ -90,11 +101,10 @@ python test_assignment1.py
 
 ## Reproducibility Notes
 
-- Parser uses only standard Python libraries
+- Parser uses only standard Python libraries for core functionality
 - Deterministic calculations (no randomness)
 - Tested with multiple PDB files for robustness
 - All file paths should be relative or configurable
-- Originally created in an academic setting
 
 ## Troubleshooting
 
@@ -104,7 +114,6 @@ python test_assignment1.py
 
 ## Notes
 
-- Originally created in an academic setting
 - Parser handles standard PDB format
 - Radius of gyration indicates structural compactness
 - Kyte-Doolittle scale for hydrophobicity classification

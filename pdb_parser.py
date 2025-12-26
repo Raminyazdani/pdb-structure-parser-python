@@ -3,9 +3,7 @@ import math
 from tempfile import template
 
 """
-PDB Parser Script Template for Structural Bioinformatics Assignments
-
-Created by Alper Yurtseven on 12 May 2023
+PDB Parser for Structural Bioinformatics
 """
 
 Kyte_Doolittle_scale = {'ALA': 1.8, 'ARG': -4.5, 'ASN': -3.5, 'ASP': -3.5, 'CYS': 2.5,
@@ -662,5 +660,3 @@ def print_function(pdb_file):
 
 if __name__ == "__main__":
     print_function(sys.argv[1])
-    # print_function("../2yna.pdb")
-    # print_function("../test_pdb.txt")
