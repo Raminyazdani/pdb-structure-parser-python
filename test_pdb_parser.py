@@ -1,5 +1,5 @@
 import pytest
-from assignment1_template import (
+from pdb_parser import (
     pdb_file_reader,
     amino_acid_composition_calculator,
     amino_acid_composition_percentage_calculator,
