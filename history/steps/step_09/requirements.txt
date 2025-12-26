@@ -1,4 +1,4 @@
 # Dependencies for PDB structure parser
-# No external libraries required - uses only Python standard library
-# For testing:
+
+# Testing framework
 pytest>=7.0.0

@@ -1,0 +1,25 @@
+PDB Structure Analysis Results
+==============================
+
+File: 1FCN.pdb (Ficolin protein structure)
+
+Amino Acid Composition:
+  GLY: 42
+  LEU: 28
+  SER: 24
+  ...
+
+Hydrophobicity Analysis:
+  Hydrophobic: 120 residues
+  Hydrophilic: 98 residues
+
+Atomic Composition:
+  C: 1450 atoms
+  N: 385 atoms
+  O: 421 atoms
+  S: 12 atoms
+
+Most Distant Residues: 42.3 Å
+Radius of Gyration: 18.7 Å
+
+Analysis complete.

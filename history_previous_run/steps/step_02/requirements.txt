@@ -1,0 +1,4 @@
+# Dependencies for PDB structure parser
+# No external libraries required for core functionality
+# For testing:
+pytest>=7.0.0
