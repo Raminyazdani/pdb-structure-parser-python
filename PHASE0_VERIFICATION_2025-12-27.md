@@ -22,7 +22,7 @@ The repository has been fully processed in a previous run and meets or exceeds a
 |------|--------|-------|------------|
 | project_identity.md | ✅ | 49 | Complete professional identity with all required sections |
 | README.md | ✅ | 120 | Portfolio-grade documentation, aligned with project identity |
-| report.md | ✅ | 366 | Complete execution log documenting all transformation phases |
+| report.md | ✅ | 434 | Complete execution log documenting all transformation phases (includes Phase 0 audit) |
 | suggestion.txt | ✅ | 18 | 17 entries + header, TAB-separated, all STATUS=APPLIED |
 | suggestions_done.txt | ✅ | 28 | 15 applied changes with locators, before/after snippets, notes |
 
