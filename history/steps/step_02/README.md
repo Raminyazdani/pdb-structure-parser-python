@@ -4,18 +4,14 @@ Parse and analyze protein 3D structures from PDB files.
 
 ## Overview
 
-This project implements a PDB (Protein Data Bank) file parser for structural bioinformatics analysis.
+This project will implement a PDB (Protein Data Bank) file parser and structural analysis toolkit.
 
-## Tech Stack
+## Planned Features
 
-- Python 3.x
-- Standard library
-
-## Features
-
-- PDB file reading
-- Custom column extraction system
-- ATOM line parsing
+- PDB file parsing
+- Amino acid composition analysis
+- Atomic statistics
+- Spatial measurements
 
 ## Setup
 
@@ -23,12 +19,6 @@ This project implements a PDB (Protein Data Bank) file parser for structural bio
 pip install -r requirements.txt
 ```
 
-## Usage
+## Status
 
-```bash
-python pdb_parser.py <path_to_pdb_file>
-```
-
-## License
-
-MIT
+Initial project setup complete.
